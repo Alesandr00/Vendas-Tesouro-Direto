@@ -1,0 +1,10 @@
+vendas_por_tipo = df.groupby('Tipo Titulo')['Valor'].sum().reset_index()
+
+plt.figure(figsize=(10, 5))
+sns.barplot(data=vendas_por_tipo, x='Tipo Titulo', y='Valor')
+plt.title('Valor Total Vendido por Tipo de Título')
+plt.ylabel('Valor Vendido (R$)')
+plt.xlabel('Tipo de Título')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
