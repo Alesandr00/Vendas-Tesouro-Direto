@@ -1,0 +1,5 @@
+df["Data Venda"] = pd.to_datetime(df["Data Venda"], dayfirst=True) 
+df["Valor"] = df["Valor"].str.replace(",",".").astype(float)
+df["Vencimento do Titulo"] = pd.to_datetime(df["Vencimento do Titulo"], dayfirst=True)
+df["PU"] = df["PU"].str.replace(",",".").astype(float)
+df["Quantidade"] = df["Quantidade"].astype(int)
